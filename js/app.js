@@ -2,6 +2,7 @@
 const carrito = document.querySelector('#carrito');
 const cursos = document.querySelector('#lista-cursos');
 const listaCursos = document.querySelector('#lista-carrito tbody');
+const vaciarCarritoBtn = document.querySelector('#vaciar-carrito');
 
 
 // ESCUCHADORES
@@ -10,6 +11,10 @@ cargarEventLisenerteners();
 function cargarEventLisenerteners() {
     // Dispara cuando se presiona en agregar carrito
     cursos.addEventListener('click', comprarCurso);
+    // Cuando se elimina un curso del carrito
+    carrito.addEventListener('click', eliminarCurso);
+    // Al vaciar carrito
+    vaciarCarritoBtn.addEventListener('click', vaciarCarrito);
 }
 
 
@@ -53,5 +58,26 @@ function insertarCarrito(curso) {
     `;
 
     listaCursos.appendChild(row);
-    
+
+}
+
+// Eliminar el curso del carrito en el DOM
+function eliminarCurso(e) {
+    e.preventDefault();
+
+    let curso;
+    if(e.target.classList.contains('borrar-curso')) {
+        e.target.parentElement.parentElement.remove();
+    }
+}
+
+// Elimina todos los cursos del carrito en el DOM
+function vaciarCarrito() {
+    // forma lenta
+    // listaCursos.innerHTML = '';
+    // forma rápida(recomendada)
+    while(listaCursos.firstChild) {
+        listaCursos.removeChild(listaCursos.firstChild);
+    }
+    return false;
 }
