@@ -1,10 +1,10 @@
-# Products App
+# Shopping Cart
 ---
 
 ## Descripción
 
-Aplicación de listado de productos con Vanilla Javascript & Bootstrap 4
-[Ir al sitio](https://FerGuevaraM95.github.io/products-app/)
+Aplicación de carrito de compras  con Vanilla Javascript
+[Ir al sitio](https://FerGuevaraM95.github.io/shopping-cart/)
 
 ## Instalación
 
@@ -13,8 +13,10 @@ Aplicación de listado de productos con Vanilla Javascript & Bootstrap 4
 ## Tecnologías
 
 - Html 5
+-CSS 3
+- Skeleton V2.0.4
 - Javascript 2015
-- Bootstrap 4
+
 
 
 ## Uso
